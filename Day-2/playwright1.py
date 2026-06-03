@@ -1,27 +1,24 @@
-# print("Shiva")
-from playwright.sync_api import sync_playwright, Playwright
+from playwright.sync_api import sync_playwright
 
-with sync_playwright() as playwright:
-    mybrowser = playwright.firefox
-    browser = mybrowser.launch(headless=False)   # 1000 ms = 1 second delay per action)
-    page = browser.new_page()
-    page.goto("https://automationexercise.com/login")
-    
-    page.screenshot(path='F:/Playwright_Project')
-    title = page.title()
-    assert "Exercise - Signup / Login" in title
-    print(title)
-    browser.close()
+def test_google():
+    with sync_playwright() as p:
+        # Launch browser (Chromium / Chrome)
+        browser = p.chromium.launch(headless=False)
 
-    # headless = True  # Default (no UI)
-    # headless = False  # Opens browser UI
-    # slow_mo = 1000
-    # channel = "chrome"
-    # channel = "msedge"
-    # ignore_https_errors = True
-    # timeout = 30000 #Max time to launch browser
+        # Create new browser context
+        context = browser.new_context()
 
-    # launch() → Browser    level    settings
-    # context() → User / session    level    settings
-    # page() → Page     level    actions
+        # Open new page
+        page = context.new_page()
 
+        # Navigate to URL
+        page.goto("https://www.google.com")
+
+        # Verify title
+        assert "Google" in page.title()
+        print("Title is:", page.title())
+
+        # Close browser
+        browser.close()
+
+test_google()
