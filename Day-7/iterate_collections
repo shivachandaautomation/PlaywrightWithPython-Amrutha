@@ -1,0 +1,22 @@
+# iterate lists   
+# list= [1,2,4,3,10,5]
+# for item in list:
+#     print(item)
+
+# my_set = {1, 2, 3, 4, 5}
+# for item in my_set:
+#     print(item) 
+
+# my_tuple = (1, 2, 3, 4, 5)
+# for item in my_tuple:
+#     print(item) 
+    
+my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}
+for key, value in my_dict.items():
+    print(key, value)
+
+for key in my_dict.keys():
+    print(key)  
+
+for value in my_dict.values():
+    print(value)
