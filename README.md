@@ -5,6 +5,7 @@ This repository contains Python practice exercises and Playwright automation exa
 ## Structure
 
 - `Day-1/` through `Day-7/`: Python practice files covering variables, conditions, loops, collections, and more.
+- `Day-8/`: File handling examples and employee name reading scripts.
 - `venv1/`: Python virtual environment used for dependencies.
 
 ## Notes
