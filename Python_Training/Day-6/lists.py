@@ -38,9 +38,19 @@ list1 = [1, 2, 2, 3, 4, 5]
 print(list1)  # Output: [1, 2, 2, 3, 4, 5]
 set2 = set(list1)
 print(set2)  # Output: {1, 2, 3, 4, 5}
+l2 = list(set2)
+print(l2)  # Output: [1, 2, 3, 4, 5]
 
-list5 = [1,2,3,4,4,5,6,6,7,7]
+list5 = [1,2,3,4,4,5,6,6,7,7, ]
 unique_numbers = list(set(list5))
 print(unique_numbers)  # Output: [1, 2, 3, 4, 5, 6, 7]
 
+# List methods in Python are built-in functions that can be used to perform various operations on lists, which are ordered collections of items. Here are some common list methods:
+# 1. append(): Adds an item to the end of the list.   
+# 2. insert(): Inserts an item at a specified position in the list.
+# 3. remove(): Removes the first occurrence of a specified item from the list.
+# 4. pop(): Removes and returns the item at a specified position in the list. If no index is specified, it removes and returns the last item.
+# 5. sort(): Sorts the items of the list in place (i.e., it modifies the original list).
+# 6. reverse(): Reverses the order of the items in the list in place.
+# 7. clear(): Removes all items from the list.
 
