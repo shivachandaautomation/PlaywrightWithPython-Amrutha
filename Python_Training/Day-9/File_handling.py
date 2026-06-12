@@ -19,14 +19,24 @@
 #    for line in lines:
 #       print(line, end='')
 
-with open("python_Training\\example.txt", "r+") as file:
-   file.write("Hello, World!")
-   file.seek(0)
-   lines = file.readlines()
-   print ("Content added Successfully!!")
-   print(lines)
+# with open("python_Training\\example.txt", "r+") as file:
+#    file.write("Hello, World!")
+#    file.seek(0)
+#    lines = file.readlines()
+#    print ("Content added Successfully!!")
+#    print(lines)
 
-# lines = ["First line\n", "Second line\n", "Third line\n"]
-# with open("python_Training\\example.txt", "w") as file:
-#    file.writelines(lines)
-#    print
+lines = ["First line\n", "Second line\n", "Third line\n"]
+with open("python_Training\\example.txt", "w") as file:
+   file.writelines(lines)
+   print
+
+   # Handling Exceptions When Closing a File
+
+# In Python, we use a try-finally block to handle exceptions when closing a file. The "finally" block ensures that the file is closed regardless of whether an error occurs in the try block −
+try:
+   file = open("example.txt", "w")
+   file.write("This is an example with exception handling.")
+finally:
+   file.close()
+   print ("File closed successfully!!")

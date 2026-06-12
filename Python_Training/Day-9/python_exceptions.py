@@ -12,3 +12,4 @@ diferent exceptions in python:
 2. FileNotFoundError: Raised when you try to open a file that does not exist.
 3. ValueError: Raised when a function receives an argument of the correct type but an inappropriate value.
 4. TypeError: Raised when an operation or function is applied to an object of inappropriate type
+
